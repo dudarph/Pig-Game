@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 60%;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Play', sans-serif;
+  font-weight: 400;
+  color: #000;
+
+  background-image: linear-gradient(to top right, #e2b810 0%, #ec3b05 100%);
+}
+
+/* Layout */
+main {
+  width: 100rem;
+  height: 60rem;
+  display: flex;
+  overflow: hidden;
+
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+
+  position: relative;
+}
+
+.player {
+  flex: 50%;
+  padding: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: all 0.75s;
+}
+
+/* Elements */
+.name {
+  margin-bottom: 1rem;
+
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 300;
+
+  position: relative;
+}
+
+.score {
+  margin-bottom: auto;
+
+  font-size: 8rem;
+  font-weight: 300;
+  color: #ee7d05;
+}
+
+.player--active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.player--active .name {
+  font-weight: 700;
+}
+
+.player--active .score {
+  font-weight: 400;
+}
+
+.player--active .current {
+  opacity: 1;
+}
+
+.current {
+  width: 65%;
+  padding: 2rem;
+
+
+  color: #fff;
+  text-align: center;
+
+
+  background-color: #ee7d05;
+  opacity: 0.8;
+  border-radius: 9px;
+  transition: all 0.75s;
+}
+
+.current-label {
+  margin-bottom: 1rem;
+
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  color: #eee;
+}
+
+.current-score {
+  font-size: 3.5rem;
+}
+
+/* ABSOLUTE POSITIONED ELEMENTS */
+.btn {
+  padding: 0.7rem 2.5rem;
+
+  color: #444;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 400;
+
+  transform: translateX(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+
+  position: absolute;
+  left: 50%;
+}
+
+.btn::first-letter {
+  display: inline-block;
+  margin-right: 0.7rem;
+
+  font-size: 2.4rem;
+}
+
+.btn--new {
+  top: 3rem;
+}
+
+.btn--roll {
+  top: 40rem;
+}
+
+.btn--hold {
+  top: 46rem;
+}
+
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.dice {
+  height: 10rem;
+
+  transform: translateX(-50%);
+
+  position: absolute;
+  left: 50%;
+  top: 16.5rem;
+}
+
+.player--winner {
+  background-color: #2f2f2f;
+}
+
+.player--winner .name {
+  font-weight: 700;
+  color: #d50b0b;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Media queries */
+@media screen and (max-width: 991px) {
+  body {
+    display: block;
+    height: auto;
+  }
+
+  main {
+    flex-direction: column;
+    height: auto;
+    width: 90rem;
+    margin: 50px auto;
+
+    overflow: visible;
+  }
+
+  .player {
+    padding: 15rem;
+  }
+
+  .btn--roll {
+    top: 44rem;
+  }
+
+  .btn--hold {
+    top: 63rem;
+  }
+
+  .dice {
+    top: 51rem;
+  }
+}

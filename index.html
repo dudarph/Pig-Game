@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/public/favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/public/favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/public/favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/public/favicon/site.webmanifest" />
+		<link
+			rel="mask-icon"
+			href="/public/favicon/safari-pinned-tab.svg"
+			color="#5bbad5"
+		/>
+		<link rel="shortcut icon" href="/public/favicon/favicon.ico" />
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta
+			name="msapplication-config"
+			content="/public/favicon/browserconfig.xml"
+		/>
+		<meta name="theme-color" content="#ffffff" />
+		<title>Pig Game</title>
+	</head>
+	<body>
+		<main>
+			<section class="player player--0 player--active">
+				<h2 class="name" id="name--0">Игрок 1</h2>
+				<p class="score" id="score--0">47</p>
+				<div class="current">
+					<p class="current-label">Текущие очки</p>
+					<p class="current-score" id="current--0">0</p>
+				</div>
+			</section>
+
+			<section class="player player--1">
+				<h2 class="name" id="name--1">Игрок 2</h2>
+				<p class="score" id="score--1">31</p>
+				<div class="current">
+					<p class="current-label">Текущие очки</p>
+					<p class="current-score" id="current--1">0</p>
+				</div>
+			</section>
+
+			<img src="dice1.png" alt="Playing dice" class="dice" />
+			<button class="btn btn--new">🐷 Новая игра</button>
+			<button class="btn btn--roll">🎲 Бросить кубик</button>
+			<button class="btn btn--hold">👌 Оставить</button>
+		</main>
+		<script type="module" src="/main.js"></script>
+	</body>
+</html>
